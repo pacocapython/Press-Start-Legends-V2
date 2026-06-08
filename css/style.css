@@ -98,6 +98,7 @@ body {
        left: 70px; 
         right: 0;   
          padding: 15px;
+          font-size: 75%;
 }
 .menu {
     position: fixed;
@@ -158,4 +159,77 @@ body {
 .opcoes-menu a:hover {
     color: #000000;
     padding-left: 5px;
+}
+/* Container Geral da Seção de Comentários */
+.secao-comentarios {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #000000;
+    border: 4px solid #ff0000; /* Borda vermelha grossa estilo pixel */
+    font-family: 'Press Start 2P', monospace;
+    box-shadow: 6px 6px 0px #550000; /* Sombra sólida sem desfoque (pixel art) */
+}
+
+/* Título da seção */
+.secao-comentarios h2 {
+    color: #ff0000;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Alinhamento do Formulário */
+.form-comentario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Grupos de campos (Label + Input) */
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo dos Labels (Textos explicativos) */
+.campo-grupo label {
+    color: #ffffff;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+/* Estilo da Caixa de Texto e do Input de Nome */
+.campo-grupo input, 
+.campo-grupo textarea {
+    background-color: #111111;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    padding: 12px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Efeito de foco quando o usuário clica para digitar */
+.campo-grupo input:focus, 
+.campo-grupo textarea:focus {
+    border-color: #ff0000; /* Muda a borda para vermelho */
+}
+
+/* Cor do texto de exemplo (Placeholder) */
+.campo-grupo input::placeholder,
+.campo-grupo textarea::placeholder {
+    color: #555555;
+}
+
+/* O Botão de Enviar Estilo "START" */
+.btn-enviar {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    padding: 12
 }

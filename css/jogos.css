@@ -65,6 +65,6 @@ p {
     color: rgb(255, 255, 255);
 }
 img {
-    filter: drop-shadow(0px 0px 15px #fafafa) 
-            drop-shadow(0px 0px 5px #ffffff);
+    filter: drop-shadow(0px 0px 15px #330000) 
+            drop-shadow(0px 0px 5px #260000);
 }
