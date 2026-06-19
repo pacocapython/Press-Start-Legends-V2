@@ -181,55 +181,40 @@ body {
 }
 
 /* Alinhamento do Formulário */
-.form-comentario {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Configuração do formulário para virar um Grid */
+#formComentario {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Força duas colunas */
+    grid-template-rows: auto auto !important;    /* Força duas linhas */
+    gap: 15px !important;
+    align-items: start !important;
 }
 
-/* Grupos de campos (Label + Input) */
-.campo-grupo {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* Força o campo de texto (Nome) para a esquerda, no topo */
+#formComentario input {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    height: 45px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* Estilo dos Labels (Textos explicativos) */
-.campo-grupo label {
-    color: #ffffff;
-    font-size: 10px;
-    text-transform: uppercase;
+/* Força o botão para a esquerda, abaixo do nome */
+#formComentario button {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    height: 45px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* Estilo da Caixa de Texto e do Input de Nome */
-.campo-grupo input, 
-.campo-grupo textarea {
-    background-color: #111111;
-    border: 3px solid #ffffff;
-    color: #ffffff;
-    padding: 12px;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 10px;
-    outline: none;
-    box-sizing: border-box;
+/* Força a caixa de mensagem para a direita, esticando pelas duas linhas */
+#formComentario textarea {
+    grid-column: 2 !important;
+    grid-row: 1 / span 2 !important;
+    height: 44px !important; /* Altura total combinada */
+    width: 100% !important;
+    box-sizing: border-box !important;
+    resize: none !important;
 }
 
-/* Efeito de foco quando o usuário clica para digitar */
-.campo-grupo input:focus, 
-.campo-grupo textarea:focus {
-    border-color: #ff0000; /* Muda a borda para vermelho */
-}
-
-/* Cor do texto de exemplo (Placeholder) */
-.campo-grupo input::placeholder,
-.campo-grupo textarea::placeholder {
-    color: #555555;
-}
-
-/* O Botão de Enviar Estilo "START" */
-.btn-enviar {
-    background-color: #ff0000;
-    color: #ffffff;
-    border: 3px solid #ffffff;
-    padding: 12
-}

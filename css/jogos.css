@@ -10,6 +10,13 @@ body {
    text-align: center;
    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+.secao-comentarios {
+        font-family: 'Press Start 2P', cursive;
+}
+#formComentario, #formComentario button, #nomeUsuario, #textoComentario, #listaComentarios {
+font-family: 'Press Start 2P', cursive;
+}
+
 .first {
     width: 65%;
     max-width: 750px;
@@ -68,3 +75,61 @@ img {
     filter: drop-shadow(0px 0px 15px #330000) 
             drop-shadow(0px 0px 5px #260000);
 }
+/* Container Geral da Seção de Comentários */
+.secao-comentarios {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #000000;
+    border: 4px solid #ff0000; /* Borda vermelha grossa estilo pixel */
+    font-family: 'Press Start 2P', monospace;
+    box-shadow: 6px 6px 0px #550000; /* Sombra sólida sem desfoque (pixel art) */
+}
+
+/* Título da seção */
+.secao-comentarios h2 {
+    color: #ff0000;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Alinhamento do Formulário */
+/* Configuração do formulário para virar um Grid */
+#formComentario {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Força duas colunas */
+    grid-template-rows: auto auto !important;    /* Força duas linhas */
+    gap: 15px !important;
+    align-items: start !important;
+}
+
+/* Força o campo de texto (Nome) para a esquerda, no topo */
+#formComentario input {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    height: 45px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Força o botão para a esquerda, abaixo do nome */
+#formComentario button {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    height: 45px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Força a caixa de mensagem para a direita, esticando pelas duas linhas */
+#formComentario textarea {
+    grid-column: 2 !important;
+    grid-row: 1 / span 2 !important;
+    height: 44px !important; /* Altura total combinada */
+    width: 100% !important;
+    box-sizing: border-box !important;
+    resize: none !important;
+}
+

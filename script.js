@@ -1,10 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-
-// ... restante do código do config, do db e do addDoc que te mandei ...
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+    
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -21,9 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app); // Garante que esta linha existe!
-// ==========================================
-// FUNÇÃO A: ENVIAR COMENTÁRIO PARA O FIRESTORE
-// ==========================================
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('formComentario');
 
@@ -35,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const texto = document.getElementById('textoComentario').value;
 
             try {
-                // Criamos ou acedemos à coleção 'comentarios' e adicionamos o documento lá dentro
                 await addDoc(collection(db, "comentarios"), {
                     usuario: nome,
                     comentario: texto,
@@ -43,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 alert("🎮 Comentário gravado no Cloud Firestore!");
-                form.reset(); // Limpa o formulário
+                form.reset(); 
 
             } catch (error) {
                 console.error("Erro ao enviar para o Firestore:", error);

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="../css/jogos.css">
 </head>
 <body>
@@ -68,6 +69,26 @@
         dia do apocalipse, e desde então ele viveu neste mundo amargurado, e de repente ele se depara se importando com uma pessoa,
         aquela pessoa em que ele vê sua filha, <strong>Ellie</strong>.</p>
     </section>
+    <section class="secao-comentarios">
+        <h2>Deixe seu Comentário</h2>
+        
+        <form id="formComentario">
+            <input type="text" id="nomeUsuario" placeholder="Seu nome ou Nickname" required>
+            <textarea id="textoComentario" placeholder="Qual sua opnião sobre o site e os personagens?" required></textarea>
+            <button type="submit">Enviar Comentário</button>
+        </form>
+    
+        <div id="listaComentarios">
+            </div>
+    </section>
+    <script type="module" src="script.js"></script>
+
+    <script>
+        function alternarMenu() {
+            const menu = document.getElementById("menuLateral");
+            menu.classList.toggle("aberto");
+        }
+    </script>
     <footer>Criado por Paçoca, 2026. Todos os direitos reservados.</footer>
     <p>gabrielgustavosv8@gmail.com</p>
 </body>
